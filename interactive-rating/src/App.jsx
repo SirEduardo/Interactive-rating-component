@@ -3,27 +3,31 @@ import { useState } from 'react'
 import './App.css'
 
 
+
 function App() {
+  
   const [active,setActive] = useState(false)
+  
   const handleClick = () =>{
     setActive(!active)
+  }
   
 
-  }
+  
   const [submit,setSubmit] = useState (false)
   const handleSubmitclick = () => {
     const thankYou = document.querySelector(".thank-you");
     const container = document.querySelector(".container");
+    if(handleClick !==0){
     container.style.display = "none"
     thankYou.style.display = "flex"
+  }
     setSubmit(!submit)
   
 
   } 
-
-
- 
-  return (
+  
+   return (
     
   <main> 
    <div className='container'>
@@ -50,7 +54,7 @@ function App() {
   </div> 
     <div className='thank-you' style={{display:"none"}} >
       <img src='illustration-thank-you.svg'></img>
-      <p className='rating'>`You selected {setActive} out of 5</p>
+      <p className='rating'>You selected {setActive} out of 5</p>
       <span>
       <h1>Thank you!</h1>
       <p>We appreciate you taking the time to give a rating. If you ever need
