@@ -99,6 +99,7 @@ span p{
 
 }
 .rating{
+    display: flex;
     color: hsl(25, 97%, 53%);
     font-weight: 300;
     background: hsl(218, 19%, 18%);
